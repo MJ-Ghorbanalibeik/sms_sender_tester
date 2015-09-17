@@ -7,6 +7,7 @@ module SmsSenderTester
       'Sender: ' + sender.to_s +
       'Options: ' + options.to_s
     )
+    return {message_id: rand(1000)}
   end
 
   def self.get_balance(credentials)
