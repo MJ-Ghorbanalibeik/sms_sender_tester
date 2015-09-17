@@ -1,5 +1,7 @@
 module SmsSenderTester
   def self.send_sms(credentials, mobile_number, message, sender, options = nil)
+    return {error: 'Raise error for some reason!'} if options && options[:raise_error] = true
+    raise 'Raise exception for some reason!' if options && options[:raise_exception] = true
     Rails.logger.debug('SmsSenderTester::send_sms method. ' + 
       'Credentials: ' + credentials.to_s + 
       'Mobile number: ' + mobile_number.to_s + 
