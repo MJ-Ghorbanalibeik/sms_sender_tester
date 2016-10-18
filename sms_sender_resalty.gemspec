@@ -11,12 +11,15 @@ Gem::Specification.new do |s|
   s.email       = ["mojtaba.ghorbanalibeik@gmail.com", "bukhamseen.h@gmail.com"]
   s.summary     = "Tester of sending sms"
   s.description = "Tester of sending sms for: 
-https://github.com/MJ-Ghorbanalibeik/sms_sender_smsgw
-https://github.com/MJ-Ghorbanalibeik/sms_sender_ots
-https://github.com/MJ-Ghorbanalibeik/sms_sender_cbf
-https://github.com/MJ-Ghorbanalibeik/sms_sender_resalty
+  - https://github.com/MJ-Ghorbanalibeik/sms_sender_ots
+  - https://github.com/MJ-Ghorbanalibeik/sms_sender_cbf
+  - https://github.com/MJ-Ghorbanalibeik/sms_sender_resalty
 "
+  s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
+
+  s.add_dependency "rails"
+  s.add_dependency "dotenv"
 end

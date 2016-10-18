@@ -18,10 +18,11 @@ module SmsSenderTester
     )
   end
 
-  def self.query_message(credentials, msgid)
+  def self.query_message(credentials, message_id, options = nil)
     Rails.logger.debug('SmsSenderTester::query_message method. ' + 
       'Credentials: ' + credentials.to_s + 
-      'Message id: ' + msgid.to_s 
+      'Message id: ' + message_id.to_s 
     )
+    return {'status' => 'OK'}
   end
 end
